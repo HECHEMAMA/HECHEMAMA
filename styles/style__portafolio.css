@@ -1,0 +1,210 @@
+:root {
+    --padding-father: 1rem;
+    --padding-child: .5rem;
+    --color-resalt: rgb(253, 93, 0.99);
+    --margin-center: 0 6rem;
+}
+
+@font-face {
+    font-family: Grotesk;
+    src: url(fonts/SpaceGrotesk-VariableFont_wght.ttf);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    font-family: Grotesk;
+    background-color: rgba(214, 214, 214, 0.555);
+    overflow-x: hidden;
+
+    display: grid;
+    row-gap: 3rem;
+    grid-template-areas:
+        'header header header'
+        'main main main'
+        'footer footer footer'
+    ;
+}
+
+
+.header {
+    display: flex;
+    justify-content: center;
+    padding: var(--padding-father);
+    margin: var(--margin-center);
+    height: 300px;
+    position: relative;
+    border-radius: 0px 0 20px 20px;
+
+    grid-area: header;
+}
+
+.header .header__user__info {
+    margin: auto 20px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.header .header__user__info p span {
+    font-weight: 700;
+}
+
+
+header .header__user__info p {
+    font-size: 1.2em;
+
+}
+
+header .header__user__info p .word__automatic {
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 2px solid;
+    width: 12ch;
+
+    animation: typing 3.8s steps(11) infinite,
+    blink .7s infinite step-end ;
+    overflow: hidden;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+        color: red;
+    }
+
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+
+}
+
+header .header__user__info .tools {
+    font-weight: 500;
+    position: absolute;
+    color: var(--color-resalt);
+    left: 0;
+    bottom: -20px;
+    white-space: nowrap;
+}
+
+header img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    z-index: -10;
+    align-self: center;
+}
+
+.header .hr {
+    position: absolute;
+    bottom: -20px;
+    width: 100%;
+    border: 1px solid var(--color-resalt);
+}
+
+main {
+    margin: var(--margin-center);
+    padding: var(--padding-father);
+    grid-area: main;
+}
+
+main h1 {
+    text-decoration: underline var(--color-resalt);
+    font-size: 2.3em;
+}
+
+main div {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+main div .project {
+    padding: var(--padding-father);
+    padding-bottom: 2rem;
+    background-color: #fff;
+    border-radius: 20px;
+    margin-top: 0;
+    margin-bottom: 20px;
+    display: flex;
+    flex-flow: column nowrap;
+    position: relative;
+}
+
+main .project .icon__tecnology {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    z-index: 20;
+    bottom: 10px;
+    right: 10px;
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    gap: .1rem;
+}
+
+main .project .icon__tecnology .link {
+    justify-self: start;
+}
+
+main .project .icon__tecnology .icon {
+    width: 25px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+main .project .img__project {
+    width: 100%;
+    background: transparent;
+}
+
+main .project img {
+    border-radius: 10px 10px 0 0;
+    display: flex;
+    width: 100%;
+    border: 0 solid transparent;
+    object-fit: cover;
+}
+
+@media (width<=800px) {
+    .header {
+        flex-direction: column;
+        justify-content: start;
+        margin: 0 3rem;
+        height: 400px;
+    }
+
+    .header img {
+        display: flex;
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+    }
+
+    main {
+        margin: 0 3rem;
+    }
+
+    main div {
+        display: block;
+        columns: 1;
+    }
+
+    main .project .icon__tecnology {
+        position: absolute;
+        bottom: 10px;
+        right: 10px;
+    }
+}
