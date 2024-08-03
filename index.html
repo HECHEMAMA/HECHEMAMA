@@ -9,29 +9,70 @@
 </head>
 
 <body>
-    <header class="header">
-        <img src="img/user.webp" alt="Jeremmy González" srcset="">
-        <div class="header__user__info">
-            <p>Soy <span>Jeremmy González</span> desarrollador de sitios web y aplicaciones web. <span
-                    class="word__automatic">Programador</span></p>
-            <div class="tools">
-                <small>Designer</small>
-                <small>Figma</small>
-                <small>Developer</small>
-            </div>
-        </div>
-        <hr class="hr">
+    <header class="header__nav">
+        <nav>
+            <ul>
+                <li class="active">Inicio</li>
+                <li>Sobre mí</li>
+                <li>Contáctame</li>
+                <li>Proyectos</li>
+            </ul>
+        </nav>
     </header>
 
-
     <main>
-        <h1>Proyectos</h1>
-        <div>
-            <section class="project">
+        <header class="header">
+            <div class="img">
+                <img src="img/user.jpg" alt="Jeremmy González" srcset="">
+            </div>
+            <div class="header__user__info">
+                <p>Hola, soy <span class="resalt weigth">Jeremmy González</span> <br> lorem ipsum dolor sit amet
+                    consectetur adipisicing elit. Similique, quibusdam et veniam in minus aliquam.</p>
+                <div class="social__media">
+                    <button class="btn btn__flow">Descargar CV</button>
+                    <a href="#">
+                        <svg class="icon icon__github" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512">
+                            <path class="icon__github"
+                                d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3 .3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5 .3-6.2 2.3zm44.2-1.7c-2.9 .7-4.9 2.6-4.6 4.9 .3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3 .7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3 .3 2.9 2.3 3.9 1.6 1 3.6 .7 4.3-.7 .7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3 .7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3 .7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon icon__linkedin" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512">
+                            <path
+                                d="M416 32H31.9C14.3 32 0 46.5 0 64.3v383.4C0 465.5 14.3 480 31.9 480H416c17.6 0 32-14.5 32-32.3V64.3c0-17.8-14.4-32.3-32-32.3zM135.4 416H69V202.2h66.5V416zm-33.2-243c-21.3 0-38.5-17.3-38.5-38.5S80.9 96 102.2 96c21.2 0 38.5 17.3 38.5 38.5 0 21.3-17.2 38.5-38.5 38.5zm282.1 243h-66.4V312c0-24.8-.5-56.7-34.5-56.7-34.6 0-39.9 27-39.9 54.9V416h-66.4V202.2h63.7v29.2h.9c8.9-16.8 30.6-34.5 62.9-34.5 67.2 0 79.7 44.3 79.7 101.9V416z" />
+                        </svg>
+                    </a>
+                    <a href="#">
+                        <svg class="icon icon__email" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" id="gmail">
+                            <path fill="#ea4435" d="M16.58,19.1068l-12.69-8.0757A3,3,0,0,1,7.1109,5.97l9.31,5.9243L24.78,6.0428A3,3,0,0,1,28.22,10.9579Z"></path>
+                            <path fill="#00ac47" d="M25.5,5.5h4a0,0,0,0,1,0,0v18a3,3,0,0,1-3,3h0a3,3,0,0,1-3-3V7.5a2,2,0,0,1,2-2Z" transform="rotate(180 26.5 16)"></path>
+                            <path fill="#ffba00" d="M29.4562,8.0656c-.0088-.06-.0081-.1213-.0206-.1812-.0192-.0918-.0549-.1766-.0823-.2652a2.9312,2.9312,0,0,0-.0958-.2993c-.02-.0475-.0508-.0892-.0735-.1354A2.9838,2.9838,0,0,0,28.9686,6.8c-.04-.0581-.09-.1076-.1342-.1626a3.0282,3.0282,0,0,0-.2455-.2849c-.0665-.0647-.1423-.1188-.2146-.1771a3.02,3.02,0,0,0-.24-.1857c-.0793-.0518-.1661-.0917-.25-.1359-.0884-.0461-.175-.0963-.267-.1331-.0889-.0358-.1837-.0586-.2766-.0859s-.1853-.06-.2807-.0777a3.0543,3.0543,0,0,0-.357-.036c-.0759-.0053-.1511-.0186-.2273-.018a2.9778,2.9778,0,0,0-.4219.0425c-.0563.0084-.113.0077-.1689.0193a33.211,33.211,0,0,0-.5645.178c-.0515.022-.0966.0547-.1465.0795A2.901,2.901,0,0,0,23.5,8.5v5.762l4.72-3.3043a2.8878,2.8878,0,0,0,1.2359-2.8923Z"></path>
+                            <path fill="#4285f4" d="M5.5,5.5h0a3,3,0,0,1,3,3v18a0,0,0,0,1,0,0h-4a2,2,0,0,1-2-2V8.5a3,3,0,0,1,3-3Z"></path>
+                            <path fill="#c52528" d="M2.5439,8.0656c.0088-.06.0081-.1213.0206-.1812.0192-.0918.0549-.1766.0823-.2652A2.9312,2.9312,0,0,1,2.7426,7.32c.02-.0475.0508-.0892.0736-.1354A2.9719,2.9719,0,0,1,3.0316,6.8c.04-.0581.09-.1076.1342-.1626a3.0272,3.0272,0,0,1,.2454-.2849c.0665-.0647.1423-.1188.2147-.1771a3.0005,3.0005,0,0,1,.24-.1857c.0793-.0518.1661-.0917.25-.1359A2.9747,2.9747,0,0,1,4.3829,5.72c.089-.0358.1838-.0586.2766-.0859s.1853-.06.2807-.0777a3.0565,3.0565,0,0,1,.357-.036c.076-.0053.1511-.0186.2273-.018a2.9763,2.9763,0,0,1,.4219.0425c.0563.0084.113.0077.169.0193a2.9056,2.9056,0,0,1,.286.0888,2.9157,2.9157,0,0,1,.2785.0892c.0514.022.0965.0547.1465.0795a2.9745,2.9745,0,0,1,.3742.21A2.9943,2.9943,0,0,1,8.5,8.5v5.762L3.78,10.9579A2.8891,2.8891,0,0,1,2.5439,8.0656Z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </header>
+        <div class="about__me">
+            <h1 class="title">About me</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Alias ad commodi, saepe nobis vero repellat
+                accusamus nisi sint dicta. Aut mollitia in necessitatibus! Obcaecati voluptatum aspernatur nostrum ea
+                natus vero accusamus, rerum laborum quos eos porro laboriosam nam, minus veritatis dicta a quia aliquid
+                molestiae animi eaque? Fugiat, molestiae aut.</p>
+            <section class="social__media">
+                <a href="#" title="github"><img src="img/github-brands-solid.svg" alt="github"></a>
+                <a href="#" title="linkedin"><img src="img/linkedin-brands-solid.svg" alt="linkedin"></a>
+                <a href="#" title="email"><img src="img/envelope-solid.svg"></a>
+            </section>
+        </div>
+        <h2 class="title">Proyectos</h2>
+        <div class="project">
+            <section>
                 <div class="icon__tecnology"></div>
                 <img src="img/Calculator.webp" alt="Imagen de una Calculadora hecha con JavaScript">
                 <h2>Calculator</h2>
-                <p>Calculadora sencilla, con HTML, CSS y JavaScript para dale la funcionalidad.</p>
+                <p>Calculadora sencilla, con HTML, CSS y JavaScript para darle la funcionalidad.</p>
                 <div class="icon__tecnology">
                     <a href="#" class="link">GitHub</a>
                     <img src="img/html-5.webp" alt="" class="icon">
@@ -39,10 +80,11 @@
                     <img src="img/js.webp" alt="" class="icon">
                 </div>
             </section>
-            <section class="project">
+            <section>
                 <img src="img/Calculator.webp" alt="Imagen de una Calculadora hecha con JavaScript">
                 <h2>Title project</h2>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas atque enim provident! Necessitatibus rem perspiciatis inventore dicta illo</p>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas atque enim provident! Necessitatibus
+                    rem perspiciatis inventore dicta illo</p>
             </section>
         </div>
     </main>

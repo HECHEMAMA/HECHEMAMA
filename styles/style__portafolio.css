@@ -1,8 +1,9 @@
 :root {
     --padding-father: 1rem;
     --padding-child: .5rem;
-    --color-resalt: rgb(253, 93, 0.99);
+    --color-resalt: #FD5D00;
     --margin-center: 0 6rem;
+    --bg-black: rgb(0, 0, 0);
 }
 
 @font-face {
@@ -12,16 +13,15 @@
 
 * {
     box-sizing: border-box;
+    font-family: Grotesk;
 }
 
 body {
     margin: 0;
     padding: 0;
     height: 100vh;
-    font-family: Grotesk;
-    background-color: rgba(214, 214, 214, 0.555);
     overflow-x: hidden;
-
+    background-color: black;
     display: grid;
     row-gap: 3rem;
     grid-template-areas:
@@ -31,118 +31,253 @@ body {
     ;
 }
 
-
-.header {
-    display: flex;
-    justify-content: center;
-    padding: var(--padding-father);
-    margin: var(--margin-center);
-    height: 300px;
+.btn {
     position: relative;
-    border-radius: 0px 0 20px 20px;
-
-    grid-area: header;
+    padding: .7rem .2rem;
+    min-width: 100px;
+    width: 40px;
+    cursor: pointer;
+    border-style: none;
+    background-color: #FFF;
+    border-radius: 6px;
+    color: #000;
+    margin: 0 10px;
+    white-space: nowrap;
 }
 
-.header .header__user__info {
-    margin: auto 20px;
-    text-align: center;
+@property --angle {
+    syntax: '<angle>';
+    initial-value: 0deg;
+    inherits: false;
+}
+
+.btn__flow {
     position: relative;
+}
+
+.btn__flow::before {
+    filter: blur(10px);
+    opacity: .7;
+}
+
+.btn__flow::after,
+.btn__flow::before {
+    content: '';
+    position: absolute;
+    background-image: conic-gradient(from var(--angle), transparent 70%, rgb(253, 93, 0.99));
+    border-radius: 6px;
+    z-index: -1;
+    padding: 2.4px;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: 3000ms spin linear infinite;
+}
+
+@keyframes spin {
+    from {
+        --angle: 0deg;
+    }
+
+    to {
+        --angle: 360deg;
+    }
+}
+
+a {
+    display: block;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    padding: 2px;
+    background: #FFF;
+    /* background: linear-gradient(125deg, #1C1B4B, #B80E65, #179181); */
+}
+
+.icon__linkedin {
+    background: #FFF;
+    fill: #0a78b5;
+}
+
+.icon__github {
+    background: #786df8;
+    fill: #FFF;
+}
+
+.icon__gmail {
+    background: #FFF;
+}
+
+.resalt {
+    color: var(--color-resalt);
+}
+
+.weigth {
+    font-weight: bolder;
+}
+
+
+.header__nav {
+    display: inline-block;
+    grid-area: header;
+    background-color: var(--bg-black);
+}
+
+.header__nav nav {
+    display: flex;
+    justify-content: center;
+}
+
+.header__nav nav ul {
+    display: flex;
+    gap: 1rem;
+}
+
+.header__nav nav ul li {
+    display: block;
+    color: #FFF;
+    border-bottom: 1px solid transparent;
+    padding: .8rem;
+    cursor: pointer;
+    transition: border 300ms ease-in-out;
+}
+
+.header__nav nav ul li:hover:not(.header__nav nav ul .active) {
+    border-bottom: 1px solid var(--color-resalt);
+}
+
+.header__nav nav ul .active {
+    color: var(--color-resalt);
+    border-bottom: 1px solid var(--color-resalt);
+}
+
+/*---------- Estilos contenidos en centro ----------*/
+
+
+main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10rem;
+}
+
+/* main div {
+    display: flex;
+    align-items: start;
+    flex-flow: column nowrap;
+    height: 70vh;
+    padding: 0.5rem 2rem;
+    background-color: transparent;
+} */
+
+/* main .title {
+    text-decoration: underline var(--color-resalt);
+    font-size: 2.3em;
+    color: #fff;
+} */
+/*---------- Presentation ----------*/
+main .header {
+    position: relative;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    min-height: 500px;
+}
+
+main .header .img {
+    height: 500px;
+    z-index: -1;
+    position: relative;
+}
+
+
+main .header .img::before{
+    content: '';
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    transform: translate(-50%, -50%);
+    transform: rotate(145deg);
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    border: 2px solid var(--color-resalt);
+}
+
+main .header .img img {
+    height: 100%;
+}
+
+main .header .header__user__info {
+    display: flex;
+    justify-content: center;
+    flex-flow: column nowrap;
     z-index: 10;
 }
 
-.header .header__user__info p span {
-    font-weight: 700;
+main .header .header__user__info p {
+    max-width: 800px;
+    padding: 0 .5rem;
+    font-size: 1.7rem;
+    text-align: left;
+    color: #fff;
 }
 
-
-header .header__user__info p {
-    font-size: 1.2em;
-
+main .header .header__user__info .social__media {
+    display: flex;
+    align-items: center;
+    flex-flow: row nowrap;
+    column-gap: .8rem;
+    height: auto;
+    padding: .4rem;
+    align-self: flex-start;
 }
 
-header .header__user__info p .word__automatic {
+/*---------- About me ----------*/
+main .about__me {
+    color: #fff;
+    justify-content: center;
+}
+
+main .about__me .social__media {
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    gap: .5rem;
+}
+
+main .about__me .social__media a {
+    display: flex;
+}
+
+main .about__me .social__media a img {
     display: block;
-    font-family: monospace;
-    white-space: nowrap;
-    border-right: 2px solid;
-    width: 12ch;
-
-    animation: typing 3.8s steps(11) infinite,
-    blink .7s infinite step-end ;
-    overflow: hidden;
+    width: 30px;
 }
 
-@keyframes typing {
-    from {
-        width: 0;
-        color: red;
-    }
-
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
-    }
-
-}
-
-header .header__user__info .tools {
-    font-weight: 500;
-    position: absolute;
-    color: var(--color-resalt);
-    left: 0;
-    bottom: -20px;
-    white-space: nowrap;
-}
-
-header img {
-    border-radius: 50%;
-    width: 200px;
-    height: 200px;
-    object-fit: cover;
-    z-index: -10;
-    align-self: center;
-}
-
-.header .hr {
-    position: absolute;
-    bottom: -20px;
-    width: 100%;
-    border: 1px solid var(--color-resalt);
-}
-
-main {
-    margin: var(--margin-center);
-    padding: var(--padding-father);
-    grid-area: main;
-}
-
-main h1 {
-    text-decoration: underline var(--color-resalt);
-    font-size: 2.3em;
-}
-
-main div {
+/*---------- Estilos de los proyectos ----------*/
+main .project {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
-}
-
-main div .project {
-    padding: var(--padding-father);
-    padding-bottom: 2rem;
-    background-color: #fff;
-    border-radius: 20px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    display: flex;
-    flex-flow: column nowrap;
+    column-gap: 20px;
     position: relative;
+    color: #fff;
 }
 
-main .project .icon__tecnology {
+main .project section .icon__tecnology {
     position: absolute;
     width: 100%;
     height: auto;
@@ -155,22 +290,22 @@ main .project .icon__tecnology {
     gap: .1rem;
 }
 
-main .project .icon__tecnology .link {
+main .project section .icon__tecnology .link {
     justify-self: start;
 }
 
-main .project .icon__tecnology .icon {
+main .project section .icon__tecnology .icon {
     width: 25px;
     object-fit: cover;
     border-radius: 10px;
 }
 
-main .project .img__project {
+main .project section .img__project {
     width: 100%;
     background: transparent;
 }
 
-main .project img {
+main .project section img {
     border-radius: 10px 10px 0 0;
     display: flex;
     width: 100%;
@@ -179,30 +314,36 @@ main .project img {
 }
 
 @media (width<=800px) {
-    .header {
+    main .header {
         flex-direction: column;
-        justify-content: start;
-        margin: 0 3rem;
+        padding: 0;
+    }
+
+    main .header .img {
         height: 400px;
+        position: initial;
     }
 
-    .header img {
-        display: flex;
-        width: 200px;
-        height: 200px;
-        object-fit: cover;
+    main .header .header__user__info {
+        justify-self: center;
+        margin: 0;
     }
 
-    main {
-        margin: 0 3rem;
+    main .header .header__user__info p {
+        font-size: 1.4rem;
     }
 
-    main div {
-        display: block;
-        columns: 1;
+    main .header .header__user__info .social__media {
+        align-self: center;
     }
 
-    main .project .icon__tecnology {
+    main .project {
+        grid-template-columns: 1fr;
+        row-gap: 1rem;
+        padding: 1rem;
+    }
+
+    main .project section .icon__tecnology {
         position: absolute;
         bottom: 10px;
         right: 10px;
