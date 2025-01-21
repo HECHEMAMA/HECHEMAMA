@@ -1,4 +1,6 @@
-# 💫 About Me:
+#  👋 Hi! I'm Jeremmy Gonzalez
+
+## 💫 About Me:
 <br>    I am 20 years old and I am from Valencia, Carabobo, Venezuela.<br>    I am a self-taught and highly creative individual who seeks to learn and improve every day.<br>    I like to build unique designs and make use of new technologies.,<br>
 
 ### ✍️ Edsger Dijkstra
@@ -18,7 +20,6 @@
 ![](https://github-readme-streak-stats.herokuapp.com/?user=hechemama&theme=prussian&hide_border=false)<br/>
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=hechemama&theme=prussian&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
 
-
 <!--
 
 ## 🏆 GitHub Trophies
@@ -31,3 +32,5 @@
 [![](https://visitcount.itsvg.in/api?id=hechemama&icon=1&color=12)](https://visitcount.itsvg.in)
 
 -->
+## Contact me
+<a href="mailto:jefagoes@gmail.com"><img src="https://img.shields.io/badge/-Gmail-D14836?style=flat&logo=Gmail&logoColor=white"/></a>
